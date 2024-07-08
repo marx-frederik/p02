@@ -24,7 +24,7 @@
         position: relative; /* Erlaubt das Positionieren des Overlays innerhalb des Headers */
         /*background-image: url("assets/house.jpg");*/
         /*background-image:linear-gradient(#ffe43762, #ffe437b2);*/
-        /*background-color: #ffe43715;*/
+        background-color: #ffe43715;
         background-size: cover;
         background-position: center;
         
@@ -37,14 +37,12 @@
       }
 
       .gradient-section {
-        /* height: 200vh; Make the section taller than the viewport */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        transition: background 0.2s linear;
+        background-image:linear-gradient(#ffe43715, #ffe4373b);
       }
-      
+
+      .gradient-section2 {
+        background-image:linear-gradient(#ffe4373b, #ffe43750);
+      }
       .overlay {
         position: absolute; /* Absolut positioniert relativ zum Header */
         top: 0;
@@ -65,7 +63,7 @@
       
       .custom-title{
         /*background-color:#5a232c44;*/
-        font-size:100px;
+        font-size:80px;
         font-weight: 550;
       }
       
@@ -101,7 +99,7 @@
 
     <!-- Header-->
      
-    <header class="py-5 gradient-section ">
+    <header class="py-5 ">
       <!--<div class="overlay"></div>-->
       <div class="container px-3" style="z-index: 2; ">
         <div class="d-flex justify-content-center" >
@@ -131,7 +129,7 @@
       </div>
     </header>
     <!-- Features section-->
-    <section class="py-5" id="features" >
+    <section class="py-5 gradient-section" id="features" >
       <div class="container px-5 my-5"> 
         <div class="row gx-5" >
           <div class="col-lg-4 mb-5 mb-lg-0" ><!--style="background-color: #5a232cb9;"-->
@@ -178,7 +176,7 @@
       </div>
     </section>
     <!-- Contact section-->
-    <section class="py-5">
+    <section class="py-5 gradient-section2">
       <!--
       <div class="d-flex justify-content-center">
         <div class="d-flex">
