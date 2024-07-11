@@ -1,0 +1,80 @@
+:root {
+  --gap: 100px; /* Konstanter Spalt */
+}
+
+.line-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%; /* Anpassbare Breite */
+  height: 3px; /* Dicke der Linie */
+  background-color: transparent;
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background-color: #000; /* Weiße Farbe */
+  animation: expand 2s forwards;
+}
+
+.line-container2 {
+  position: relative;
+  width: 100%;
+  height: 3px; /* Dicke der Linie */
+  background-color: transparent;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Schlagschatten */
+}
+
+.line2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%; /* Volle Breite */
+  background-color: #000; /* Schwarze Farbe */
+  margin-left: -4px;
+  margin-top: 4px;
+}
+
+.line-container.scrolled .line {
+  transform: scaleX(1);
+}
+
+.line-left {
+  left: 50%;
+  transform: translateX(calc(-100% - var(--gap) / 2));
+}
+
+.line-right {
+  right: 50%;
+  transform: translateX(calc(100% + var(--gap) / 2));
+}
+
+@keyframes expand {
+  from {
+    width: 0;
+  }
+  to {
+    width: calc(50% - var(--gap) / 2);
+  }
+}
+
+/* Media Queries für Bildschirmabhängige Anpassungen */
+@media (max-width: 1200px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    width: 100%;
+  }
+}

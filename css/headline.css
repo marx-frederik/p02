@@ -1,0 +1,24 @@
+.bg-effect::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.bg-effect:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.bg-effect::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: hsla(45, 100%, 58%, 0.463);
+  z-index: -1;
+  transition: transform .3s ease;
+}
+
+.bg-effect {
+  position: relative;
+}

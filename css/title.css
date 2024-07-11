@@ -1,0 +1,68 @@
+
+.cut-text {
+
+  cursor: pointer;
+  &:before {
+    text-transform: uppercase;
+    /*letter-spacing: 2px;*/
+    transform: translateY(5px);
+    transition: 0s;
+  }
+  &:not(.move) {
+    &:before {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 1s .8s, transform 0.5s .8s;
+    }
+  }
+}
+
+/* Styling */
+
+.h1-title {
+  display: inline-block;
+  position: relative;
+  span {
+    display: inline-block;
+  }
+  > span {
+    display: block;
+    position: relative;
+    > span {
+      transition: 1s;
+      opacity: 0;
+      > span {
+        overflow: hidden;
+      }
+      &:nth-child(1) {
+        transform: translateX(-10px);
+        > span {
+          transform: translateY(-50%);
+          > span {
+            transform: translateY(50%);
+          }
+        }
+      }
+      &:nth-child(2) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(10px);
+        > span {
+          transform: translateY(50%);
+          > span {
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+  &.move {
+    > span {
+      > span {
+        opacity: 1;
+        transform: translate(0);
+      }
+    }
+  }
+}
