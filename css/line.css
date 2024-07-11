@@ -8,6 +8,8 @@
   max-width: 100%; /* Anpassbare Breite */
   height: 3px; /* Dicke der Linie */
   background-color: transparent;
+  margin-top: 10em;
+  margin-bottom: 3em;
 }
 
 .line {
@@ -21,9 +23,10 @@
 .line-container2 {
   position: relative;
   width: 100%;
-  height: 3px; /* Dicke der Linie */
+  height: 2px; /* Dicke der Linie */
   background-color: transparent;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Schlagschatten */
+  
+  /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Schlagschatten */
 }
 
 .line2 {
