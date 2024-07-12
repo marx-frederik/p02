@@ -20,202 +20,48 @@
     <link href="css/styles.css" rel="stylesheet" />
 
     <style>
-      body {
-        margin: 0;
-        padding: 0;
-        height: 200vh; /* Erhöht die Höhe der Seite, um das Scrollen zu demonstrieren */
-        /*background-image: linear-gradient(to bottom right,#ffe43716, #ffe437);*/
-        background-size: cover; /* Deckt den gesamten Viewport ab */
-        background-attachment: fixed; /* Fixiert den Hintergrund */
-        background-position: center; /* Zentriert das Hintergrundbild */
-      }
 
-      header {
-        position: relative; /* Erlaubt das Positionieren des Overlays innerhalb des Headers */
-        /*background-image: url("assets/house.jpg");
-        background-image:linear-gradient(#ffe43762, #ffe437b2);
-        background-image: linear-gradient(#ffe43756, #ffe437ce);*/
-
-        background-color: #ffe4371c;
-        background-size: cover;
-        background-position: center;
-
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        overflow: hidden; /* Stellt sicher, dass keine Inhalte den Header verlassen */
-
-        padding-top: 5em;
-      }
-
-      .feature-section {
-        background-image: linear-gradient(#ffe4371c, #ffe4373f);
-        /*background-color: #ffe4371c;*/
-      }
-
-      .contact-section {
-        /*background-color: ffe4371c;*/
-        background-image: linear-gradient(#ffe4373f, #ffe437b2);
-      }
-
-      .overlay2 {
-        position: absolute; /* Absolut positioniert relativ zum Header */
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(
-          0,
-          0,
-          0,
-          0.2
-        ); /* Halbtransparentes schwarzes Overlay */
-        z-index: 1; /* Stellt sicher, dass das Overlay über dem Hintergrundbild liegt */
-      }
-
-      body {
-        font-family: "Poppins", sans-serif;
-      }
-
-      .custom-title {
-        /*background-color:#5a232c44;*/
-        font-size: 70px;
-        font-weight: 800;
-        letter-spacing: 0px;
-      }
-
-      .custom-text {
-        color: #5a232c;
-      }
-
-      .navbar {
-        /*background-color: #5A232C; */
-        background-color: rgb(34, 34, 34);
-      }
-
-      .logo-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .contact-info {
-        font-size: 20px;
-      }
-
-      ul {
-        list-style-type: square;
-      }
-
-      .feature-font {
-        font-size: 20px;
-      }
-
-      .feature-title {
-        min-height: 80px;
-        font-size: 35px;
-        font-weight: 500;
-      }
-
-      .feature-title {
-        min-height: 80px;
-        font-size: 30px;
-        font-weight: 550;
-        /*background-image: linear-gradient(to right,#5a232c31, #5a232c78);*/
-      }
-
-      .transparent-list li {
-        /*background-color: rgba(255, 255, 255, 0); /* Hintergrundfarbe mit 50% Transparenz */
-        /*opacity: 0.8;  Gesamttransparenz des Elements */
-        margin-left: -25px;
-        padding: 10px;
-        /*padding-bottom: 20px;*/
-        border-radius: 5px;
-        list-style: none;
-        /*box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.103);*/
-        transition: transform 0.3s ease;
-        display: inline-block;
-        will-change: transform;
-      }
-
-      li:hover {
-        transform: scale(1.02);
-      }
-
-      .card {
-        flex: 1 1 calc(50% - 1rem); /* Flex grow und Basis auf 50% - 1rem für Abstand */
-      }
-      .card-header {
-        background-color: #e9e9e935;
-      }
-      .card-body {
-        background-color: #ffe43715; /* ffe43750 */
-      }
-
-      .section-divider {
-        padding: 6px;
-        font-size: 50px;
-        /*background-image: linear-gradient(to right,#5a232c5f,#5a232cc5);*/
-      }
-
-      .diffusion-section {
-        z-index: 2;
-        /*background-image: linear-gradient(#ffe43752, #ffe4371c);*/
-        height: 200px;
-      }
-
-      .title-image {
-        margin-top: -70px;
-        margin-left: 50px;
-      }
-
-      .divider {
-        background-color: #ffe4371c;
-        padding-top: 180px;
-      }
-
-      #header-line {
-        margin-top: 100px;
-      }
-
-      #testjo {
-        /*margin-top:-130px;*/
-        width: 24px;
-        height: 24px;
-        position: absolute;
-        top: -30px;
-        left: 50%;
-        transform: translateX(-50%) scale(0);
-        transition: transform 1s 2s; /* Verzögerung um 2s, um nach den Linienanimationen zu erscheinen */
-      }
-
-      .wrapper.scrolled #testjo {
-        transform: translateX(-50%) scale(1);
-      }
-      @keyframes fadeInLeftToRight {
-        from {
-          opacity: 0;
-          transform: translateX(-50px);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-
-      .fade-in-left-to-right {
-        animation-duration: 1s;
-        animation-fill-mode: both;
-        animation-name: fadeInLeftToRight;
-      }
     </style>
-    <link rel="stylesheet" href="css/headline.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/title.css" />
     <link rel="stylesheet" href="css/line.css" />
+    <link rel="stylesheet" href="css/headline.css" />
   </head>
   <body>
+
+    <div class="offcanvas offcanvas-end about-offcanvas w-50" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <!--<h5 class="about-title text-uppercase border-bottom border-2 mt-3 ms-1" id="offcanvasExampleLabel">Über mich</h5>-->
+        <h1 class="pb-3 fw-bold section-divider">über mich</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <span class="h3 ms-3 fw-bold text-uppercase">
+          Stefan Foemer
+        </span>
+        <p class="about-text pt-3 ps-3 text-start">
+          
+          Als Energieberater stehe ich Ihnen mit einer umfassenden Ausbildung zur Seite. 
+          <img src="/assets/IMG_4346.jpg" class="about-image m-4" alt="author" height="200rem" />
+        </p>
+        <p class="about-text ps-3 text-start">
+          Nach dem Abschluss meines dualen Bachelorstudiums in Bauingenieurwesen bei der <b>Deutschen Bahn AG</b> und der
+          <b>Bergischen Universität Wuppertal</b>, absolvierte ich mein Masterstudium in Bauingenieurwesen an der <b>RWTH Aaachen</b>.
+        </p>
+        <p class="about-text ps-3 text-start">
+          Beruflich habe ich seit 2012 regelmäßig <b>Schreinermeister Christoph Hoscheid</b> bei Montagearbeiten zur Seite gestanden.
+          Nach meiner dreijährigen Werkstudententätigkeit in der Energieberatung im <b>Ingenieurbüro Blaschke</b> in Herzogenrath fing ich 
+          die Bauleitung im <b>Ingenieurbüro Monath</b> in Kreuzau an, in der ich bis heute tätig bin. 
+        </p>
+        <p class="about-text ps-3 text-start">
+          Seit 2023 bin selbstständiger Energieberater mit der <b>Energieberatung-Zülpich</b>.
+
+        </p>
+      </div>
+      </div>
+    </div>
+
+
     <!-- Responsive navbar-->
 
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -284,7 +130,7 @@
       <div class="d-flex justify-content-center align-items-center">
         <div class="col-sm-8 col-xs-12">
           <h2 class="text-uppercase mb-3">ein flotter Spruch</h2>
-          <h1 class="custom-title pb-2">kompetente Beratung rund um Energie</h1>
+          <h1 class="custom-title">kompetente Beratung und Fördermittelbeantragung rund um Ihre Immobilie</h1>
           <div class="wrapper" id="wrapper">
             <div id="header-line" class="line-container d-flex">
               <div class="line line-left"></div>
@@ -313,25 +159,73 @@
     </header>
     <!--<section class="diffusion-section"></section>-->
 
-    <!--EBZ Divider-->
-    <div class="divider">
-      <div class="container d-flex align-items-center">
-        <div class="icon">
-          <img
-            class="filter-grayscale"
-            src="assets/icons/EBZ_Logo_RGB_icon.svg"
-            alt="development icon"
-            width="25px"
-          />
+
+    
+    <!--Introduction Section 1-->
+    <section class="intro-section" id="intro">
+      <div class="container">
+        <div class="divider" id="first-divider">
+          <div class="container">
+            <h1 class="ps-5 fw-bold section-divider">betrieb</h1>
+          </div>
+          <div class="container d-flex align-items-center">
+            <div class="icon">
+              <img
+                class="filter-grayscale"
+                src="assets/icons/EBZ_Logo_RGB_icon.svg"
+                alt="development icon"
+                width="17px"
+              />
+            </div>
+            <div class="line-container2" id="lineContainer">
+              <div class="line2"></div>
+            </div>
+          </div>
         </div>
-        <div class="line-container2" id="lineContainer">
-          <div class="line2"></div>
+
+        <div class="intro-box">
+          <div class="row">
+            <div class="col-8">
+              
+              <h1 class="intro-heading text-uppercase">
+                Fachkompetenz in Sachen Energie
+              </h1> 
+              <p class="intro-font ps-3 text-left">
+                Als Experte für Energieberatung biete ich Ihnen maßgeschneiderte Lösungen. 
+                Gemeinsam analysieren wir Ihre individuellen Bedürfnisse und entwickeln einen nachhaltigen Plan für Ihre Energiezukunft.
+              </p>
+            </div>
+            <div class="col-auto d-flex align-items-center">
+              <button type="button" class="btn button-font border-0 bg-effect" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                Mehr über mich
+              </button> 
+            </div>
+            <!--
+            <p class="d-inline-flex gap-1">
+              <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Link with href
+              </a>
+              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Button with data-bs-target
+              </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body">
+                Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+              </div>
+            </div>
+            -->
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+
+
+    <!--EBZ Divider-->
+
 
     <!-- Features section-->
-    <section class="pt-4 feature-section" id="features">
+    <section class="feature-section" id="features">
       <!--
       <div class="container  my-5">
         <div class="row gx-4">
@@ -423,10 +317,29 @@
     -->
 
       <!--FEATURE VERSION 2-->
-      <!---------------------------------------------->
-
+      <!-------------------------------------------------------------------------------------->
       <div class="container">
-        <h1 class="pb-3 fw-bold section-divider">Leistungen</h1>
+        <div class="divider">
+          <div class="container">
+            <h1 class="ps-5 fw-bold section-divider">leistungen</h1>
+          </div>
+          <div class="container d-flex align-items-center">
+            <div class="icon">
+              <img
+                class="filter-grayscale"
+                src="assets/icons/EBZ_Logo_RGB_icon.svg"
+                alt="development icon"
+                width="17px"
+              />
+            </div>
+            <div class="line-container2" id="lineContainer">
+              <div class="line2"></div>
+            </div>
+          </div>
+        </div>
+    
+
+        <!--<h1 class="pb-3 fw-bold section-divider">leistungen</h1>-->
         <p class="px-4 pt-3 text-left pt-2 feature-font">
           Als Ihr lokaler Energieberater biete ich Ihnen umfassende
           Dienstleistungen zur detaillierten Analyse Ihrer Immobilie. Mit meinem
@@ -459,10 +372,14 @@
                 </div>
               </h3>
               <p class="feature-font mx-3">
-                Paragraph of text beneath the heading to explain the heading.
-                We'll add onto it with another sentence and probably just keep
-                going until we run out of words.
+                <b>Möchten Sie ein neues Haus/eine Eigentumswohnung bauen oder kaufen oder möchten Sie ein neues Nichtwohngebäude (bspw. Bürogebäude oder Produktionshalle) errichten? </b>
+                <br>
+                Dann lohnt es sich, auf niedrigen Energie­verbrauch und nach­haltige Bau­weise zu achten.
+                Die KfW unter­stützt Ihr Vor­haben durch einen Förder­kredit mit besonders günstigen Zinsen.
+                <br>
+                Als Energieeffizienzexperte unterstütze ich Sie hierbei bei der Antragstellung und der Bereitstellung der notwendigen Nachweise und Berechnungen.
               </p>
+
             </div>
           </div>
           <div class="col d-flex align-items-start column-offset">
@@ -487,9 +404,11 @@
                 </div>
               </h3>
               <p class="feature-font mx-3">
-                Paragraph of text beneath the heading to explain the heading.
-                We'll add onto it with another sentence and probably just keep
-                going until we run out of words.
+                <b>Möchten Sie Ihr Haus/Ihre Wohnung oder Ihr Nichtwohngebäude energieeffizienzt oder barrierefrei sanieren?</b>
+                <br>
+                <b>Möchten Sie die Heizungsanlage Ihres Wohngebäudes erneuern?</b>
+                <br>
+                Als Energieeffizienzexperte unterstütze ich Sie hierbei bei der Antragstellung und der Bereitstellung der notwendigen Nachweise und Berechnungen.
               </p>
             </div>
           </div>
@@ -515,10 +434,16 @@
                 </div>
               </h3>
               <p class="feature-font mx-3">
-                Paragraph of text beneath the heading to explain the heading.
-                We'll add onto it with another sentence and probably just keep
-                going until we run out of words.
+                Gefördert werden Einzelmaßnahmen an Bestandsgebäuden,
+                deren Bauantrag beziehungsweise Bauanzeige zum Zeitpunkt der Antragstellung mindestens fünf Jahre zurückliegt.
+                <br><br>
+                Hierzu zählen unter Anderem:
               </p>
+              <ul>
+                <li>Dämmung der thermischen Gebäudehülle (Außenwand, Dach, Geschossdecken, Bodenflächen)</li>
+                <li>Erneuerung und Ersatz von Fenstern, Außentüren, Außentoren</li>
+                <li>Sommerlicher Wärmeschutz durch Ersatz oder erstmaligen Einbau von außenliegenden Sonnenschutzeinrichtungen mit optimierter Tageslichtversorgung.</li>
+              </ul>
             </div>
           </div>
           <div class="col d-flex align-items-start column-offset3">
@@ -535,9 +460,9 @@
             </div>
             <div>
               <h3 class="text-body-emphasis feature-title border-bottom">
-                <div class="bg-effect p-1">
+                <div class=" p-1"> 
                   <span class="h2 fw-bold text-uppercase"
-                    ><br />Technische Nachweise und Berechnungen</span
+                    ><br /><div class="bg-effect">Technische Nachweise und Berechnungen</div></span
                   >
                 </div>
               </h3>
@@ -547,6 +472,7 @@
                     <li>GEG-Nachweis</li>
                     <li>Sommerlicher Wärmeschutznachweis</li>
                     <li>Heizlastberechnung</li>
+                    <li>LCA (Lebenszyklusanalyse)</li>
                   </ul>
                 </div>
                 <div class="col-md-6">
@@ -554,6 +480,7 @@
                     <li>Hydraulischer Abgleich</li>
                     <li>Lüftungskonzept</li>
                     <li>Luftdichtheitskonzept</li>
+                    <li>iSFP (individueller Sanierungsfahrplan)</li>
                   </ul>
                 </div>
               </div>
@@ -566,26 +493,30 @@
     <!---------------------------------------------->
     <div class="contact-section">
       <!--EBZ Divider-->
-      <div class="pt-5">
-        <div class="container d-flex align-items-center">
-          <div class="icon">
-            <img
-              class="icon-ebz"
-              src="assets/icons/EBZ_Logo_RGB_icon.svg"
-              alt="development icon"
-              width="25px"
-            />
-          </div>
-          <div class="line-container2" id="lineContainer">
-            <div class="line2"></div>
-          </div>
+    <!--EBZ Divider-->
+
+    <div class="divider">
+      <div class="container">
+        <h1 class="ps-5 fw-bold section-divider">kontakt</h1>
+      </div>
+      <div class="container d-flex align-items-center">
+        <div class="icon">
+          <img
+            class="filter-grayscale"
+            src="assets/icons/EBZ_Logo_RGB_icon.svg"
+            alt="development icon"
+            width="17px"
+          />
+        </div>
+        <div class="line-container2" id="lineContainer">
+          <div class="line2"></div>
         </div>
       </div>
+    </div>
 
       <!-- Contact section-->
       <section class="pt-4 gradient-section2">
         <div class="container">
-          <h1 class="pb-2 fw-bold section-divider">Kontakt</h1>
           <!--
         <div class="d-flex justify-content-center">
           <div class="d-flex">
