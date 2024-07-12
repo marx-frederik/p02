@@ -6,10 +6,9 @@
   position: relative;
   width: 100%;
   max-width: 100%; /* Anpassbare Breite */
-  height: 3px; /* Dicke der Linie */
+  height: 2px; /* Dicke der Linie */
   background-color: transparent;
-  margin-top: 10em;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
 }
 
 .line {
