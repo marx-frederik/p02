@@ -1,3 +1,7 @@
+:root{
+  --background: white;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -14,7 +18,9 @@ body {
     background-image:linear-gradient(#ffe43762, #ffe437b2);
     background-image: linear-gradient(#ffe43756, #ffe437ce);*/
 
-    background-color: #ffe4371c;
+    /*background-color: #ffe4371c;*/
+    background-color: rgba(219, 219, 219, 0.459);
+    background-color:fffce7c8;
     background-size: cover;
     background-position: center;
 
@@ -26,16 +32,31 @@ body {
     overflow: hidden; /* Stellt sicher, dass keine Inhalte den Header verlassen */
 
     padding-top: 2em;
+    padding-bottom:5em;
+  }
+
+  .diffusion-section{
+    height:150px;
+    background-image:linear-gradient(rgb(255, 241, 159), white);
+  }
+
+  .intro-section{
+    /*background-color: #ffe4371c;*/
+    background-color: var(--background);
+    padding-top: 0em;
+    padding-bottom: 10rem;
   }
 
   .feature-section {
-    background-image: linear-gradient(#ffe4371c, #ffe4373f);
+    /*background-image: linear-gradient(#ffe4371c, #ffe4373f);*/
     /*background-color: #ffe4371c;*/
+    background-color: rgba(238, 237, 237, 0.411)
   }
 
   .contact-section {
     /*background-color: ffe4371c;*/
-    background-image: linear-gradient(#ffe4373f, #ffe437b2);
+    /*background-image: linear-gradient(#ffe4373f, #ffe437b2);*/
+    background-color: var(--background);
   }
 
   .overlay2 {
@@ -88,7 +109,7 @@ body {
   }
 
   .feature-font {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .feature-title {
@@ -138,11 +159,6 @@ body {
     /*background-image: linear-gradient(to right,#5a232c5f,#5a232cc5);*/
   }
 
-  .diffusion-section {
-    z-index: 2;
-    /*background-image: linear-gradient(#ffe43752, #ffe4371c);*/
-    height: 200px;
-  }
 
   .title-image {
     margin-top: -70px;
@@ -151,7 +167,7 @@ body {
 
   .divider {
     /*background-color: #ffe4371c;*/
-    padding-top: 7rem;
+    padding-top: 5rem;
   }
 
   #header-line {
@@ -196,12 +212,6 @@ body {
     margin-left: 100px;
   }
 
-  .intro-section{
-    background-color: #ffe4371c;
-    padding-top: 3em;
-    padding-bottom: 10rem;
-  }
-
   .button-font{
     font-size: 30px;
     font-weight: 600;
@@ -223,7 +233,7 @@ body {
   }
 
   .about-offcanvas{
-    background-color:#fffce7c8 ;
+    background-color:#fffce7c8;
     backdrop-filter: blur(5px); 
     width:700px;
   }
@@ -231,12 +241,10 @@ body {
   .intro-box{
     border-radius: 16px;
     padding-top: 4em;
-
   }
 
   .about-text{
     font-size:17px;
-
   }
 
   .about-title{
@@ -252,5 +260,5 @@ body {
   }
 
   #first-divider{
-    padding-top:15rem;
+    padding-top:5rem;
   }
