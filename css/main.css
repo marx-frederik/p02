@@ -35,6 +35,24 @@ body {
     padding-bottom:5em;
   }
 
+  .info-item {
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    flex: 1 1 auto; /* Ermöglicht das Umbrechen von Elementen */
+  }
+
+  .navbar-text{
+    font-size:0.8rem;
+    white-space: nowrap;
+  }
+
+
+  .header-logo{
+    width: 330px;
+    height: 260px;
+  }
+  
   .diffusion-section{
     height:150px;
     background-image:linear-gradient(rgb(255, 241, 159), white);
@@ -78,6 +96,11 @@ body {
     font-family: "Poppins", sans-serif;
   }
 
+  .pretitle{
+    font-size: 25px;
+    font-weight: 300;
+  }
+
   .custom-title {
     /*background-color:#5a232c44;*/
     font-size: 60px;
@@ -108,20 +131,12 @@ body {
     list-style-type: square;
   }
 
-  .feature-font {
+  .feature-text {
     font-size: 20px;
   }
 
   .feature-title {
     min-height: 80px;
-    font-size: 35px;
-    font-weight: 500;
-  }
-
-  .feature-title {
-    min-height: 80px;
-    font-size: 30px;
-    font-weight: 550;
     /*background-image: linear-gradient(to right,#5a232c31, #5a232c78);*/
   }
 
@@ -129,13 +144,13 @@ body {
     /*background-color: rgba(255, 255, 255, 0); /* Hintergrundfarbe mit 50% Transparenz */
     /*opacity: 0.8;  Gesamttransparenz des Elements */
     margin-left: -25px;
-    padding: 10px;
+    padding: 5px;
     /*padding-bottom: 20px;*/
     border-radius: 5px;
     list-style: none;
     /*box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.103);*/
     transition: transform 0.3s ease;
-    display: inline-block;
+    
     will-change: transform;
   }
 
@@ -153,7 +168,7 @@ body {
     background-color: #ffe43715; /* ffe43750 */
   }
 
-  .section-divider {
+  .divider-title {
     padding: 6px;
     font-size: 50px;
     /*background-image: linear-gradient(to right,#5a232c5f,#5a232cc5);*/
@@ -167,7 +182,11 @@ body {
 
   .divider {
     /*background-color: #ffe4371c;*/
-    padding-top: 5rem;
+    padding-top: 3rem;
+  }
+
+  #first-divider{
+    padding-top:3rem;
   }
 
   #header-line {
@@ -235,7 +254,8 @@ body {
   .about-offcanvas{
     background-color:#fffce7c8;
     backdrop-filter: blur(5px); 
-    width:700px;
+    width:90% !important;
+    max-width: 100%; /* Stellt sicher, dass die Breite nicht breiter als der Viewport ist */
   }
 
   .intro-box{
@@ -259,6 +279,693 @@ body {
     border: 4px solid rgb(0, 0, 0);
   }
 
-  #first-divider{
-    padding-top:5rem;
+  .custom-border-bottom::after {
+    content: ""; /* Wichtig für die Anzeige des Pseudo-Elements */
+    display: block;
+    width: 90%; /* Kontrolliert die Länge der Linie */
+    height: 2px; /* Dicke der Linie */
+    background-color: #000; /* Farbe der Linie */
+    position: absolute;
+    left: 25%; /* Zentriert die Linie horizontal */
+    bottom: 0; /* Positioniert die Linie am unteren Rand */
   }
+  .custom-border-bottom {
+    position: relative; /* Ermöglicht die absolute Positionierung des Pseudo-Elements */
+  }
+
+  .feature-box{
+    padding-left: 3rem;
+  }
+
+
+    /* ========================== MEDIA = QUERIES ====================== */
+    @media (max-width: 1400px) {
+
+      .navbar-text {
+        font-size: 0.7rem; /* Kleinere Schriftgröße für kleinere Bildschirme */
+      }
+  
+      .pretitle{
+        font-size: 15px;
+      }
+  
+      .custom-title {
+        /*background-color:#5a232c44;*/
+        font-size: 45px;
+        font-weight: 800;
+        letter-spacing: 1px;
+      }
+
+      .divider-title {
+        padding: 0px;
+        font-size: 30px;
+      }
+
+      .intro-heading{
+        font-size: 26px;
+        font-weight: 550;
+        margin-left: 40px;
+      }
+
+      .intro-section{
+        /*background-color: #ffe4371c;*/
+        background-color: var(--background);
+        padding-top: 0em;
+        padding-bottom: 4rem;
+      }
+
+      .intro-text{
+        font-size: 17px;
+        font-weight: 500;
+        
+        text-align: left;
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+
+      .intro-box{
+        border-radius: 16px;
+        padding-top: 2em;
+      }
+
+      .feature-text {
+        font-size: 16px;
+      }
+
+      .feature-preheading{
+        font-size: 20px;
+      }
+
+      .feature-heading{
+        font-size: 24px;
+      }
+
+      .feature-font{
+        font-size: 16px;
+      }
+
+
+      .feature-box{
+        padding-left: -200px;
+      }
+
+      .icon-square{
+        transform: scale(0.7);
+        
+      }
+
+      .more-button{
+        font-size: 20px;
+      }
+
+      #header-line {
+        margin-top: 20px;
+      }
+
+      .header-logo{
+        width: 300px;
+        height: 230px;
+      }
+      
+      .contact-heading{
+        font-size:22px;
+        font-weight: 550;
+      }
+
+      .contact-info-heading{
+        font-size:20px;
+        font-weight: 550;
+      }
+
+      .contact-info {
+        font-size: 18px;
+      }
+
+    
+    }
+    @media (max-width: 1200px) {
+
+      .navbar-text {
+        font-size: 0.7rem; /* Kleinere Schriftgröße für kleinere Bildschirme */
+      }
+  
+      .pretitle{
+        font-size: 15px;
+      }
+  
+      .custom-title {
+        /*background-color:#5a232c44;*/
+        font-size: 45px;
+        font-weight: 800;
+        letter-spacing: 1px;
+      }
+
+      .divider-title {
+        padding: 0px;
+        font-size: 30px;
+      }
+
+      .intro-heading{
+        font-size: 26px;
+        font-weight: 550;
+        margin-left: 40px;
+      }
+
+      .intro-section{
+        /*background-color: #ffe4371c;*/
+        background-color: var(--background);
+        padding-top: 0em;
+        padding-bottom: 4rem;
+      }
+
+      .intro-text{
+        font-size: 17px;
+        font-weight: 500;
+        
+        text-align: left;
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+
+      .intro-box{
+        border-radius: 16px;
+        padding-top: 2em;
+      }
+
+      .feature-text {
+        font-size: 16px;
+      }
+
+      .feature-preheading{
+        font-size: 20px;
+      }
+
+      .feature-heading{
+        font-size: 22px;
+      }
+
+      .feature-font{
+        font-size: 16px;
+      }
+
+
+      .feature-box{
+        padding-left: 0px;
+      }
+
+      .icon-square{
+        transform: scale(0.7);
+      }
+
+      .more-button{
+        font-size: 20px;
+      }
+
+      #header-line {
+        margin-top: 20px;
+      }
+
+      .header-logo{
+        width: 270px;
+        height: 200px;
+      }
+      
+      .contact-heading{
+        font-size:22px;
+        font-weight: 550;
+      }
+
+      .contact-info-heading{
+        font-size:20px;
+        font-weight: 550;
+      }
+
+      .contact-info {
+        font-size: 18px;
+      }
+
+    
+    }
+
+    @media (max-width: 992px) {
+
+      .navbar-text {
+        font-size: 0.7rem; /* Kleinere Schriftgröße für kleinere Bildschirme */
+      }
+  
+      .pretitle{
+        font-size: 15px;
+      }
+  
+      .custom-title {
+        /*background-color:#5a232c44;*/
+        font-size: 45px;
+        font-weight: 800;
+        letter-spacing: 1px;
+      }
+
+      .divider-title {
+        padding: 0px;
+        font-size: 30px;
+      }
+
+      .intro-heading{
+        font-size: 22px;
+        font-weight: 550;
+        margin-left: 40px;
+      }
+
+      .intro-section{
+        /*background-color: #ffe4371c;*/
+        background-color: var(--background);
+        padding-top: 0em;
+        padding-bottom: 4rem;
+      }
+
+      .intro-text{
+        font-size: 17px;
+        font-weight: 500;
+        
+        text-align: left;
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+
+      .intro-box{
+        border-radius: 16px;
+        padding-top: 2em;
+      }
+
+      .feature-text {
+        font-size: 16px;
+      }
+
+      .feature-preheading{
+        font-size: 20px;
+      }
+
+      .feature-heading{
+        font-size: 22px;
+      }
+
+      .feature-font{
+        font-size: 16px;
+      }
+
+      .icon-square{
+        transform: scale(0.7);
+      }
+
+      .more-button{
+        font-size: 20px;
+      }
+
+      #header-line {
+        margin-top: 20px;
+      }
+
+      .header-logo{
+        width: 250px;
+        height: 180px;
+      }
+      
+      .contact-heading{
+        font-size:22px;
+        font-weight: 550;
+      }
+
+      .contact-info-heading{
+        font-size:20px;
+        font-weight: 550;
+      }
+
+      .contact-info {
+        font-size: 18px;
+      }
+
+      .about-offcanvas{
+        background-color:#fffce7c8;
+        backdrop-filter: blur(5px); 
+        width:80% !important;
+        max-width: 100%; /* Stellt sicher, dass die Breite nicht breiter als der Viewport ist */
+      }
+      
+      .about-heading{
+        font-size:22px;
+      }
+
+      .about-text{
+        font-size: 16px;
+      }
+
+      .about-image{
+        transform: scale(0.8);
+      }
+
+      .info-item {
+        margin: 2px;
+      }
+
+    }
+
+    @media (max-width: 768px) {
+
+      .navbar-text {
+        font-size: 0.7rem; /* Kleinere Schriftgröße für kleinere Bildschirme */
+      }
+  
+      .pretitle{
+        font-size: 15px;
+      }
+  
+      .custom-title {
+        /*background-color:#5a232c44;*/
+        font-size: 30px;
+        font-weight: 800;
+        letter-spacing: 1px;
+
+      }
+
+      #testjo{
+        width: 15px;
+        height: 15px;
+      }
+
+      .divider-title {
+        padding: 0px;
+        font-size: 26px;
+      }
+
+      .intro-heading{
+        font-size: 20px;
+        font-weight: 550;
+        margin-left: 40px;
+      }
+
+      .intro-section{
+        /*background-color: #ffe4371c;*/
+        background-color: var(--background);
+        padding-top: 0em;
+        padding-bottom: 4rem;
+      }
+
+      .intro-text{
+        font-size: 15px;
+        font-weight: 500;
+        
+        text-align: left;
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+
+      .intro-box{
+        border-radius: 16px;
+        padding-top: 2em;
+      }
+
+      .more-button{
+        font-size: 15px;
+        margin-left:4rem;
+      }
+
+      .feature-text {
+        font-size: 15px;
+      }
+
+      .feature-preheading{
+        font-size: 18px;
+      }
+
+      .feature-heading{
+        font-size: 20px;
+      }
+
+      .feature-font{
+        font-size: 14px;
+      }
+
+      .icon-square{
+        transform: scale(0.7);
+      }
+
+      #header-line {
+        margin-top: 20px;
+      }
+
+      .header-logo{
+        width: 230px;
+        height: 150px;
+      }
+      
+      .contact-heading{
+        font-size:20px;
+        font-weight: 550;
+      }
+
+      .contact-info-heading{
+        font-size:18px;
+        font-weight: 550;
+      }
+
+      .contact-info {
+        font-size: 15px;
+      }
+
+      .about-offcanvas{
+        background-color:#fffce7c8;
+        backdrop-filter: blur(5px); 
+        width:80% !important;
+        max-width: 100%; /* Stellt sicher, dass die Breite nicht breiter als der Viewport ist */
+      }
+      
+      .about-heading{
+        font-size:22px;
+      }
+
+      .about-text{
+        font-size: 16px;
+      }
+
+      .about-image{
+        transform: scale(0.8);
+      }
+
+      .info-item {
+        margin: 0px;
+      }
+    }
+
+    @media (max-width: 576px) {
+
+      .navbar-text {
+        font-size: 0.7rem; /* Kleinere Schriftgröße für kleinere Bildschirme */
+      }
+
+      .info-item {
+        margin: 0px;
+      }
+  
+      .pretitle{
+        font-size: 12px;
+      }
+  
+      .custom-title {
+        /*background-color:#5a232c44;*/
+        font-size: 20px;
+        font-weight: 800;
+        letter-spacing: 1px;
+
+      }
+
+      #testjo{
+        width: 15px;
+        height: 15px;
+      }
+
+      .divider-title {
+        padding: 0px;
+        font-size: 18px;
+      }
+
+      .intro-heading{
+        font-size: 14px;
+        font-weight: 500;
+        margin-left: 40px;
+      }
+
+      .intro-section{
+        /*background-color: #ffe4371c;*/
+        background-color: var(--background);
+        padding-top: 0em;
+        padding-bottom: 4rem;
+      }
+
+      .intro-text{
+        font-size: 12px;
+        font-weight: 500;
+        
+        text-align: left;
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+
+      .intro-box{
+        border-radius: 16px;
+        padding-top: 2em;
+      }
+
+      .more-button{
+        font-size: 13px;
+        margin-left:4rem;
+      }
+
+      .feature-text {
+        font-size: 12px;
+      }
+
+      .feature-preheading{
+        font-size: 15px;
+      }
+
+      .feature-heading{
+        font-size: 14px;
+        font-weight: 500;
+        /*line-height: 0.7;*/
+      }
+
+      .feature-font{
+        font-size: 12px;
+      }
+
+      .icon-square{
+        transform: scale(0.5);
+        margin-bottom:-20px;
+      }
+
+      #header-line {
+        margin-top: 20px;
+      }
+
+      .header-logo{
+        width: 180px;
+        height: 100px;
+      }
+      
+      .contact-heading{
+        font-size:15px;
+        font-weight: 550;
+      }
+
+      .contact-info-heading{
+        font-size:13px;
+        font-weight: 550;
+      }
+
+      .contact-info {
+        font-size: 12px;
+      }
+
+      .about-offcanvas{
+        background-color:#fffce7c8;
+        backdrop-filter: blur(5px); 
+        width:80% !important;
+        max-width: 100%; /* Stellt sicher, dass die Breite nicht breiter als der Viewport ist */
+      }
+      
+      .about-heading{
+        font-size:22px;
+      }
+
+      .about-text{
+        font-size: 16px;
+      }
+
+      .about-image{
+        transform: scale(0.8);
+      }
+
+      .feature-title {
+        min-height: 0px;
+        /*background-image: linear-gradient(to right,#5a232c31, #5a232c78);*/
+      }
+
+    }
+  
+  /* ================================================================== */
+
+  .feature-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto auto;
+    gap: 0px;
+  }
+
+
+  .element1 {
+    grid-column: span 1;
+  }
+  
+  .element2 {
+    grid-column: span 1;
+  }
+  
+  .element3 {
+    grid-column: span 2;
+    padding-left: 3rem; /* Padding für Einrückung */
+  }
+
+  @media (max-width: 576px) {
+    .element1 {
+      grid-column: span 1;
+    }
+    
+    .element2 {
+      grid-column: span 1;
+    }
+    
+    .element3 {
+      grid-column: span 2;
+      padding-left: 1rem; /* Padding für Einrückung */
+      padding-right: 1rem; /* Padding für Einrückung */
+
+    }
+  }
+  
+  /* Layout für große Bildschirme */
+  @media (min-width: 1200px) {
+    .element1 {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 2;
+    }
+  
+    .element2 {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 1;
+    }
+  
+    .element3 {
+      grid-column: 2 / span 1;
+      grid-row: 2 / span 1;
+      padding-left:1rem;
+    }
+  }
+
+
+  @media (min-width: 576px) and (max-width: 992px) {
+    .element1 {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 2;
+    }
+  
+    .element2 {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 1;
+    }
+  
+    .element3 {
+      grid-column: 2 / span 1;
+      grid-row: 2 / span 1;
+      padding-left:1rem;
+    }
+  }
+

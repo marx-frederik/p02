@@ -2,12 +2,17 @@
   --gap: 100px; /* Konstanter Spalt */
 }
 
+.wrapper {
+  width: 90%;
+}
+
 .line-container {
   position: relative;
   width: 100%;
   max-width: 100%; /* Anpassbare Breite */
   height: 2px; /* Dicke der Linie */
   background-color: transparent;
+  align-self: center;
   margin-bottom: 1em;
 }
 
@@ -71,12 +76,12 @@
 
 @media (max-width: 768px) {
   .wrapper {
-    width: 95%;
+    width: 90%;
   }
 }
 
 @media (max-width: 480px) {
   .wrapper {
-    width: 100%;
+    width: 90%;
   }
 }
