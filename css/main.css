@@ -47,9 +47,8 @@ body {
     white-space: nowrap;
   }
 
-
   .header-logo{
-    width: 330px;
+    width: 360px;
     height: 260px;
   }
   
@@ -231,6 +230,15 @@ body {
     margin-left: 100px;
   }
 
+  .intro-text{
+    font-size: 20px;
+    font-weight: 500;
+    
+    text-align: left;
+    margin-left: 100px;
+    margin-right: 50px;
+  }
+
   .button-font{
     font-size: 30px;
     font-weight: 600;
@@ -252,9 +260,9 @@ body {
   }
 
   .about-offcanvas{
-    background-color:#fffce7c8;
+    background-color:#e2e2e2c8;
     backdrop-filter: blur(5px); 
-    width:90% !important;
+    width:50% !important;
     max-width: 100%; /* Stellt sicher, dass die Breite nicht breiter als der Viewport ist */
   }
 
@@ -274,9 +282,11 @@ body {
 
   .about-image{
     float: right;
+    margin:4;
     height:16em;
     border-radius: 40px;
     border: 4px solid rgb(0, 0, 0);
+    
   }
 
   .custom-border-bottom::after {
@@ -295,6 +305,10 @@ body {
 
   .feature-box{
     padding-left: 3rem;
+  }
+
+  .icon-square{
+    padding: 20px;
   }
 
 
@@ -371,7 +385,7 @@ body {
 
       .icon-square{
         transform: scale(0.7);
-        
+        padding:0;
       }
 
       .more-button{
@@ -475,6 +489,7 @@ body {
 
       .icon-square{
         transform: scale(0.7);
+        padding:0;
       }
 
       .more-button{
@@ -504,6 +519,9 @@ body {
         font-size: 18px;
       }
 
+      .about-offcanvas{
+        width:70% !important;
+      }
     
     }
 
@@ -574,6 +592,7 @@ body {
 
       .icon-square{
         transform: scale(0.7);
+        padding:0;
       }
 
       .more-button{
@@ -604,18 +623,17 @@ body {
       }
 
       .about-offcanvas{
-        background-color:#fffce7c8;
         backdrop-filter: blur(5px); 
         width:80% !important;
         max-width: 100%; /* Stellt sicher, dass die Breite nicht breiter als der Viewport ist */
       }
       
       .about-heading{
-        font-size:22px;
+        font-size:18px;
       }
 
       .about-text{
-        font-size: 16px;
+        font-size: 15px;
       }
 
       .about-image{
@@ -706,6 +724,7 @@ body {
 
       .icon-square{
         transform: scale(0.7);
+        padding:0;
       }
 
       #header-line {
@@ -732,18 +751,18 @@ body {
       }
 
       .about-offcanvas{
-        background-color:#fffce7c8;
+
         backdrop-filter: blur(5px); 
-        width:80% !important;
+        width:90% !important;
         max-width: 100%; /* Stellt sicher, dass die Breite nicht breiter als der Viewport ist */
       }
       
       .about-heading{
-        font-size:22px;
+        font-size:17px;
       }
 
       .about-text{
-        font-size: 16px;
+        font-size: 14px;
       }
 
       .about-image{
@@ -789,7 +808,7 @@ body {
 
       .intro-heading{
         font-size: 14px;
-        font-weight: 500;
+        font-weight: 550;
         margin-left: 40px;
       }
 
@@ -840,6 +859,7 @@ body {
       .icon-square{
         transform: scale(0.5);
         margin-bottom:-20px;
+        padding:0;
       }
 
       #header-line {
@@ -866,22 +886,23 @@ body {
       }
 
       .about-offcanvas{
-        background-color:#fffce7c8;
         backdrop-filter: blur(5px); 
-        width:80% !important;
+        width:100% !important;
         max-width: 100%; /* Stellt sicher, dass die Breite nicht breiter als der Viewport ist */
       }
       
       .about-heading{
-        font-size:22px;
+        font-size:15px;
       }
 
       .about-text{
-        font-size: 16px;
+        font-size: 13px;
       }
 
       .about-image{
-        transform: scale(0.8);
+        transform: scale(0.6);
+        margin:0;
+        float:none;
       }
 
       .feature-title {

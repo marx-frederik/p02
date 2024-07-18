@@ -42,38 +42,39 @@
         ></button>
       </div>
       <div class="offcanvas-body">
-        <span class="ms-3 fw-bold text-uppercase about-heading">
-          Stefan Foemer
-        </span>
-        <p class="about-text pt-3 ps-3 text-start">
-          Als Energieberater stehe ich Ihnen mit einer umfassenden Ausbildung
-          zur Seite.
+        
+          <span class="ms-3 fw-bold text-uppercase about-heading">
+            Stefan Foemer
+          </span>
+          <p class="about-text pt-3 ps-3 text-start">
+            Als Energieberater stehe ich Ihnen mit einer umfassenden Ausbildung
+            zur Seite.
+          </p>
           <img
-            src="assets/IMG_4346.jpg"
-            class="about-image m-4"
-            alt="author"
-            height="200rem"
+          src="assets/IMG_4346.jpg"
+          class="about-image"
+          alt="author"
+          height="200rem"
           />
-        </p>
-
-        <p class="about-text ps-3 text-start">
-          Nach dem Abschluss meines dualen Bachelorstudiums in Bauingenieurwesen
-          bei der <b>Deutschen Bahn AG</b> und der
-          <b>Bergischen Universität Wuppertal</b>, absolvierte ich mein
-          Masterstudium in Bauingenieurwesen an der <b>RWTH Aaachen</b>.
-        </p>
-        <p class="about-text ps-3 text-start">
-          Beruflich habe ich seit 2012 regelmäßig
-          <b>Schreinermeister Christoph Hoscheid</b> bei Montagearbeiten zur
-          Seite gestanden. Nach meiner dreijährigen Werkstudententätigkeit in
-          der Energieberatung im <b>Ingenieurbüro Blaschke</b> in Herzogenrath
-          fing ich die Bauleitung im <b>Ingenieurbüro Monath</b> in Kreuzau an,
-          in der ich bis heute tätig bin.
-        </p>
-        <p class="about-text ps-3 text-start">
-          Seit 2023 bin selbstständiger Energieberater mit der
-          <b>Energieberatung-Zülpich</b>.
-        </p>
+          <p class="about-text ps-3 text-start">
+            Nach dem Abschluss meines dualen Bachelorstudiums in Bauingenieurwesen
+            bei der <b>Deutschen Bahn AG</b> und der
+            <b>Bergischen Universität Wuppertal</b>, absolvierte ich mein
+            Masterstudium in Bauingenieurwesen an der <b>RWTH Aaachen</b>.
+          </p>
+          <p class="about-text ps-3 text-start">
+            Beruflich habe ich seit 2012 regelmäßig
+            <b>Schreinermeister Christoph Hoscheid</b> bei Montagearbeiten zur
+            Seite gestanden. Nach meiner dreijährigen Werkstudententätigkeit in
+            der Energieberatung im <b>Ingenieurbüro Blaschke</b> in Herzogenrath
+            fing ich die Bauleitung im <b>Ingenieurbüro Monath</b> in Kreuzau an,
+            in der ich bis heute tätig bin.
+          </p>
+          <p class="about-text ps-3 text-start">
+            Seit 2023 bin selbstständiger Energieberater mit der
+            <b>Energieberatung-Zülpich</b>.
+          </p>
+        
       </div>
     </div>
 
@@ -647,7 +648,35 @@
         targets.forEach((target) => {
           observer.observe(target);
         });
+
+        adjustImagePosition();
+        window.addEventListener("resize", adjustImagePosition);
+        
       });
+
+      function adjustImagePosition() {
+        const img = document.querySelector(".offcanvas-body img");
+        const pElement = document.querySelector(".offcanvas-body p"); // Stellen Sie sicher, dass dies das erste <p> Element auswählt
+        const offcanvasBody = document.querySelector(".offcanvas-body");
+      
+        if (window.innerWidth < 578) {
+          // Verschiebt das <img> Element vor das erste <p> Element
+            console.log("bastard");
+          pElement.parentNode.insertBefore(img, pElement);
+        } else {
+          // Verschiebt das <img> Element hinter das erste <p> Element
+          // Prüfen, ob das <p> Element ein nächstes Geschwisterelement hat
+          if (pElement.nextSibling) {
+            // Fügt das <img> Element nach dem <p> Element ein
+              console.log("hurensohn");
+            pElement.parentNode.insertBefore(img, pElement.nextSibling);
+          } else {
+            // Wenn das <p> Element das letzte Kind ist, fügen Sie das <img> einfach am Ende ein
+            
+            pElement.parentNode.appendChild(img);
+          }
+        }
+      }
     </script>
   </body>
 </html>
