@@ -12,7 +12,7 @@ body {
     background-position: center; /* Zentriert das Hintergrundbild */
   }
 
-  header {
+  header2 {
     position: relative; /* Erlaubt das Positionieren des Overlays innerhalb des Headers */
     
     /*background-image:linear-gradient(#ffe43762, #ffe437b2);
@@ -25,7 +25,7 @@ body {
     background-size: cover;
     background-position: center;
 
-    background-color: white;
+    background-color: #ffffff;
 
     height: auto;
     display: flex;
@@ -39,7 +39,7 @@ body {
   }
 
  
-.header_blur {
+header {
   position: relative; /* Stellt sicher, dass das Pseudo-Element relativ zum header positioniert wird */
   height: auto;
   display: flex;
@@ -51,7 +51,7 @@ body {
   padding-bottom: 5em;
 }
 
-.header_blur::before {
+header::before {
   content: ""; /* Notwendig, um das Pseudo-Element anzuzeigen */
   position: absolute; /* Positioniert das Pseudo-Element absolut innerhalb des Headers */
   top: 0;
@@ -61,7 +61,7 @@ body {
   background-image: url("/assets/house.jpg"); /* Ihr Hintergrundbild */
   background-size: cover;
   background-position: center;
-  filter: blur(8px); /* Passt die Unschärfe nach Bedarf an */
+  filter: blur(5px); /* Passt die Unschärfe nach Bedarf an */
   z-index: -1; /* Stellt das Pseudo-Element hinter den Inhalt des Headers */
 }
 
@@ -78,8 +78,9 @@ body {
   }
 
   .header-logo{
-    width: 360px;
-    height: 260px;
+    width: 30vw;
+    height:auto;
+    
   }
   
   .diffusion-section{
@@ -87,8 +88,13 @@ body {
     background-image:linear-gradient(rgb(255, 241, 159), white);
   }
 
+  .round-container {
+    border-radius: 10px; /* Ändern Sie diesen Wert nach Bedarf */
+    background-color: #bdbdbd4d;
+  }
+
   .intro-section{
-    background-color: #f5d50a1c;
+    /*background-color: #f5d50a1c;*/
     padding-top: 0em;
     padding-bottom: 4rem;
   }
@@ -96,7 +102,7 @@ body {
   .feature-section {
     /*background-image: linear-gradient(#ffe4371c, #ffe4373f);*/
     /*background-color: #ffe4371c;*/
-    background-color: rgba(238, 237, 237, 0.411)
+    background-color: rgba(238, 237, 237, 0)
   }
 
   .contact-section {
@@ -359,6 +365,17 @@ body {
         letter-spacing: 1px;
       }
 
+      #header-line {
+        margin-top: 20px;
+      }
+
+      .header-logo{
+        width: 30vw;
+        height:auto;
+        
+      }
+      
+
       .divider-title {
         padding: 0px;
         font-size: 30px;
@@ -419,16 +436,6 @@ body {
       .more-button{
         font-size: 20px;
       }
-
-      #header-line {
-        margin-top: 20px;
-      }
-
-      .header-logo{
-        width: 300px;
-        height: 230px;
-      }
-      
       .contact-heading{
         font-size:22px;
         font-weight: 550;
@@ -451,15 +458,25 @@ body {
         font-size: 0.7rem; /* Kleinere Schriftgröße für kleinere Bildschirme */
       }
   
+      #header-line {
+        margin-top: 5vh;
+      }
+
+      .header-logo{
+        width: 70vw;
+        height: auto;
+      }
+  
       .pretitle{
-        font-size: 15px;
+        font-size: 2.5vh;
       }
   
       .custom-title {
         /*background-color:#5a232c44;*/
-        font-size: 45px;
+        font-size: 4vh;
         font-weight: 800;
         letter-spacing: 1px;
+
       }
 
       .divider-title {
@@ -522,15 +539,6 @@ body {
       .more-button{
         font-size: 20px;
       }
-
-      #header-line {
-        margin-top: 20px;
-      }
-
-      .header-logo{
-        width: 270px;
-        height: 200px;
-      }
       
       .contact-heading{
         font-size:22px;
@@ -552,21 +560,70 @@ body {
     
     }
 
+    @media (max-width: 1200px) and (orientation: landscape) {
+    
+      .header-logo{
+        width: 45vh;
+        height: auto;
+      }
+
+      .pretitle{
+        font-size: 2.5vh;
+      }
+  
+      .custom-title {
+        /*background-color:#5a232c44;*/
+        font-size: 6vh;
+        font-weight: 800;
+        letter-spacing: 1px;
+
+      }
+  
+    }
+
+    @media (max-width: 1200px) and (orientation: portrait) {
+    
+      .header-logo{
+        width: 45vw;
+        height: auto;
+      }
+
+      .pretitle{
+        font-size: 2.5vh;
+      }
+  
+      .custom-title {
+        /*background-color:#5a232c44;*/
+        font-size: 4vh;
+        font-weight: 800;
+        letter-spacing: 1px;
+
+      }
+  
+    }
+
+    
+    
     @media (max-width: 992px) {
 
       .navbar-text {
         font-size: 0.7rem; /* Kleinere Schriftgröße für kleinere Bildschirme */
       }
   
+      #header-line {
+        margin-top: 5vh;
+      }
+  
       .pretitle{
-        font-size: 15px;
+        font-size: 2.5vh;
       }
   
       .custom-title {
         /*background-color:#5a232c44;*/
-        font-size: 45px;
+        font-size: 4vh;
         font-weight: 800;
         letter-spacing: 1px;
+
       }
 
       .divider-title {
@@ -624,15 +681,6 @@ body {
       .more-button{
         font-size: 20px;
       }
-
-      #header-line {
-        margin-top: 20px;
-      }
-
-      .header-logo{
-        width: 250px;
-        height: 180px;
-      }
       
       .contact-heading{
         font-size:22px;
@@ -672,19 +720,76 @@ body {
 
     }
 
+    @media (max-width: 992px) and (orientation: landscape) {
+    
+      .header-logo{
+        width: 50vh;
+        height: auto;
+      }
+
+      .pretitle{
+        font-size: 2.5vh;
+      }
+
+      #header-line {
+        margin-top: 4vh;
+      }
+  
+      .custom-title {
+        /*background-color:#5a232c44;*/
+        font-size: 3vw;
+        font-weight: 800;
+        letter-spacing: 1px;
+
+      }
+  
+    }
+
+    @media (max-width: 992px) and (orientation: portrait) {
+    
+      .header-logo{
+        width: 45vw;
+        height: auto;
+      }
+
+      .pretitle{
+        font-size: 2.5vh;
+      }
+
+      #header-line {
+        margin-top: 5vh;
+      }
+  
+      .custom-title {
+        /*background-color:#5a232c44;*/
+        font-size: 4vh;
+        font-weight: 800;
+        letter-spacing: 1px;
+
+      }
+  
+    }
+
     @media (max-width: 768px) {
 
       .navbar-text {
         font-size: 0.7rem; /* Kleinere Schriftgröße für kleinere Bildschirme */
       }
+
+
+
+      .header-logo{
+        width: 70vw;
+        height: auto;
+      }
   
       .pretitle{
-        font-size: 15px;
+        font-size: 2.5vh;
       }
   
       .custom-title {
         /*background-color:#5a232c44;*/
-        font-size: 30px;
+        font-size: 4vh;
         font-weight: 800;
         letter-spacing: 1px;
 
@@ -750,15 +855,6 @@ body {
         transform: scale(0.7);
         padding:0;
       }
-
-      #header-line {
-        margin-top: 20px;
-      }
-
-      .header-logo{
-        width: 230px;
-        height: 150px;
-      }
       
       .contact-heading{
         font-size:20px;
@@ -819,27 +915,6 @@ body {
         width: 100%; /* Stellt sicher, dass der Header die volle Breite einnimmt */
     
       }  
-
-      #header-line {
-        margin-top: 5vh;
-      }
-
-      .header-logo{
-        width: 70vw;
-        height: auto;
-      }
-  
-      .pretitle{
-        font-size: 2.5vh;
-      }
-  
-      .custom-title {
-        /*background-color:#5a232c44;*/
-        font-size: 4vh;
-        font-weight: 800;
-        letter-spacing: 1px;
-
-      }
 
       #testjo{
         width: 15px;
@@ -946,6 +1021,56 @@ body {
         /*background-image: linear-gradient(to right,#5a232c31, #5a232c78);*/
       }
 
+    }
+
+    @media (max-width: 576px) and (orientation: landscape) {
+    
+      .header-logo{
+        width: 50vh;
+        height: auto;
+      }
+
+      .pretitle{
+        font-size: 2.5vh;
+      }
+
+      #header-line {
+        margin-top: 4vh;
+      }
+  
+      .custom-title {
+        /*background-color:#5a232c44;*/
+        font-size: 3vw;
+        font-weight: 800;
+        letter-spacing: 1px;
+
+      }
+  
+    }
+
+    @media (max-width: 576px) and (orientation: portrait) {
+    
+      .header-logo{
+        width: 70vw;
+        height: auto;
+      }
+
+      .pretitle{
+        font-size: 2.5vh;
+      }
+
+      #header-line {
+        margin-top: 5vh;
+      }
+  
+      .custom-title {
+        /*background-color:#5a232c44;*/
+        font-size: 4vh;
+        font-weight: 800;
+        letter-spacing: 1px;
+
+      }
+  
     }
   
   /* ================================================================== */

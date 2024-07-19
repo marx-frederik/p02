@@ -1,14 +1,14 @@
-.bg-effect::before {  
+.bg-effect2::before {  
   transform: scaleX(0);
   transform-origin: bottom right;
 }
 
-.bg-effect:hover::before {
+.bg-effect2:hover::before {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
 
-.bg-effect::before {
+.bg-effect2::before {
   content: " ";
   display: block;
   position: absolute;
@@ -19,6 +19,22 @@
   transition: transform .3s ease;
 }
 
-.bg-effect {
+.bg-effect2 {
   position: relative;
+}
+
+.bg-effect{
+  background: linear-gradient(to right, rgba(255,255,255,0) 50%, rgba(22, 160, 133,1.0) 50%);
+  background-size: 200%;
+  background-position: 0 0;
+  display: inline;
+  transition: .5s ease-in-out;
+}
+
+.bg-effect:hover{
+  background-position: -100% 0;
+}
+.textcard:hover .bg-effect {
+  /* Änderungen, die angewendet werden sollen */
+  background-position: -100% 0;
 }
