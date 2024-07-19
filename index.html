@@ -33,7 +33,7 @@
     >
       <div class="offcanvas-header">
         <!--<h5 class="about-title text-uppercase border-bottom border-2 mt-3 ms-1" id="offcanvasExampleLabel">Über mich</h5>-->
-        <h1 class="pb-3 fw-bold divider-title">über mich</h1>
+        <h1 class="pb-3 fw-bold divider-title">Über mich</h1>
         <button
           type="button"
           class="btn-close"
@@ -144,7 +144,7 @@
 
     <header class="">
       <div class="d-flex justify-content-center align-items-center">
-        <div class="col-sm-8 col-xs-12 d-flex flex-column align-items-center">
+        <div class="col-12 col-sm-8 col-xs-12 d-flex flex-column align-items-center">
           <span class="pretitle text-uppercase mb-3">ein flotter Spruch</span>
           <h1 class="custom-title">
             kompetente Beratung und Fördermittelbeantragung rund um Ihre
@@ -181,7 +181,7 @@
       <div class="container">
         <div class="divider" id="first-divider">
           <div class="container">
-            <h1 class="ps-5 fw-bold divider-title">betrieb</h1>
+            <h1 class="ps-5 fw-bold divider-title">Betrieb</h1>
           </div>
           <div class="container d-flex align-items-center">
             <div class="icon">
@@ -237,7 +237,7 @@
       <div class="container">
         <div class="divider">
           <div class="container">
-            <h1 class="ps-5 fw-bold divider-title">leistungen</h1>
+            <h1 class="ps-5 fw-bold divider-title">Leistungen</h1>
           </div>
           <div class="container d-flex align-items-center">
             <div class="icon">
@@ -478,7 +478,7 @@
 
       <div class="divider">
         <div class="container">
-          <h1 class="ps-5 fw-bold divider-title">kontakt</h1>
+          <h1 class="ps-5 fw-bold divider-title">Kontakt</h1>
         </div>
         <div class="container d-flex align-items-center">
           <div class="icon">
@@ -654,21 +654,37 @@
         
       });
 
+      function adjustHeaderHeight() {
+        // Erfassen der aktuellen Höhe der Navbar
+        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+      
+        // Berechnen der neuen Höhe des header Elements
+        const newHeaderHeight = `calc(100vh - ${navbarHeight}px)`;
+      
+        // Anwenden der neuen Höhe auf das header Element
+        // Stellen Sie sicher, dass der Selektor Ihrem header Element entspricht
+        document.querySelector('header').style.height = newHeaderHeight;
+      }
+      
+      // Event-Listener für das Laden der Seite
+      window.addEventListener('load', adjustHeaderHeight);
+      
+      // Event-Listener für das Ändern der Fenstergröße
+      window.addEventListener('resize', adjustHeaderHeight);
+
       function adjustImagePosition() {
         const img = document.querySelector(".offcanvas-body img");
         const pElement = document.querySelector(".offcanvas-body p"); // Stellen Sie sicher, dass dies das erste <p> Element auswählt
         const offcanvasBody = document.querySelector(".offcanvas-body");
-      
+  
         if (window.innerWidth < 578) {
           // Verschiebt das <img> Element vor das erste <p> Element
-            console.log("bastard");
           pElement.parentNode.insertBefore(img, pElement);
         } else {
           // Verschiebt das <img> Element hinter das erste <p> Element
           // Prüfen, ob das <p> Element ein nächstes Geschwisterelement hat
           if (pElement.nextSibling) {
             // Fügt das <img> Element nach dem <p> Element ein
-              console.log("hurensohn");
             pElement.parentNode.insertBefore(img, pElement.nextSibling);
           } else {
             // Wenn das <p> Element das letzte Kind ist, fügen Sie das <img> einfach am Ende ein

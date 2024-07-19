@@ -14,15 +14,18 @@ body {
 
   header {
     position: relative; /* Erlaubt das Positionieren des Overlays innerhalb des Headers */
-    /*background-image: url("assets/house.jpg");
-    background-image:linear-gradient(#ffe43762, #ffe437b2);
+    
+    /*background-image:linear-gradient(#ffe43762, #ffe437b2);
     background-image: linear-gradient(#ffe43756, #ffe437ce);*/
 
-    /*background-color: #ffe4371c;*/
+    /*background-color: #ffe4371c;
     background-color: rgba(219, 219, 219, 0.459);
     background-color:fffce7c8;
+    background-image: url("/assets/house.jpg");*/
     background-size: cover;
     background-position: center;
+
+    background-color: white;
 
     height: auto;
     display: flex;
@@ -34,6 +37,33 @@ body {
     padding-top: 2em;
     padding-bottom:5em;
   }
+
+ 
+.header_blur {
+  position: relative; /* Stellt sicher, dass das Pseudo-Element relativ zum header positioniert wird */
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden; /* Verhindert, dass das Pseudo-Element über den Rand hinausgeht */
+  padding-top: 2em;
+  padding-bottom: 5em;
+}
+
+.header_blur::before {
+  content: ""; /* Notwendig, um das Pseudo-Element anzuzeigen */
+  position: absolute; /* Positioniert das Pseudo-Element absolut innerhalb des Headers */
+  top: 0;
+  left: 0;
+  width: 100%; /* Stellt sicher, dass es den gesamten Header abdeckt */
+  height: 100%;
+  background-image: url("/assets/house.jpg"); /* Ihr Hintergrundbild */
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px); /* Passt die Unschärfe nach Bedarf an */
+  z-index: -1; /* Stellt das Pseudo-Element hinter den Inhalt des Headers */
+}
 
   .info-item {
     display: flex;
@@ -58,10 +88,9 @@ body {
   }
 
   .intro-section{
-    /*background-color: #ffe4371c;*/
-    background-color: var(--background);
+    background-color: #f5d50a1c;
     padding-top: 0em;
-    padding-bottom: 10rem;
+    padding-bottom: 4rem;
   }
 
   .feature-section {
@@ -343,7 +372,6 @@ body {
 
       .intro-section{
         /*background-color: #ffe4371c;*/
-        background-color: var(--background);
         padding-top: 0em;
         padding-bottom: 4rem;
       }
@@ -447,7 +475,6 @@ body {
 
       .intro-section{
         /*background-color: #ffe4371c;*/
-        background-color: var(--background);
         padding-top: 0em;
         padding-bottom: 4rem;
       }
@@ -555,7 +582,6 @@ body {
 
       .intro-section{
         /*background-color: #ffe4371c;*/
-        background-color: var(--background);
         padding-top: 0em;
         padding-bottom: 4rem;
       }
@@ -681,8 +707,6 @@ body {
       }
 
       .intro-section{
-        /*background-color: #ffe4371c;*/
-        background-color: var(--background);
         padding-top: 0em;
         padding-bottom: 4rem;
       }
@@ -776,6 +800,8 @@ body {
 
     @media (max-width: 576px) {
 
+
+
       .navbar-text {
         font-size: 0.7rem; /* Kleinere Schriftgröße für kleinere Bildschirme */
       }
@@ -783,14 +809,33 @@ body {
       .info-item {
         margin: 0px;
       }
+
+      header{
+        height: 100vh; /* Setzt die Höhe des Headers auf die volle Bildschirmhöhe */
+        display: flex; /* Aktiviert Flexbox */
+        flex-direction: column; /* Stapelt die Inhalte vertikal */
+        justify-content: center; /* Zentriert die Inhalte vertikal */
+        align-items: center; /* Zentriert die Inhalte horizontal */
+        width: 100%; /* Stellt sicher, dass der Header die volle Breite einnimmt */
+    
+      }  
+
+      #header-line {
+        margin-top: 5vh;
+      }
+
+      .header-logo{
+        width: 70vw;
+        height: auto;
+      }
   
       .pretitle{
-        font-size: 12px;
+        font-size: 2.5vh;
       }
   
       .custom-title {
         /*background-color:#5a232c44;*/
-        font-size: 20px;
+        font-size: 4vh;
         font-weight: 800;
         letter-spacing: 1px;
 
@@ -813,8 +858,6 @@ body {
       }
 
       .intro-section{
-        /*background-color: #ffe4371c;*/
-        background-color: var(--background);
         padding-top: 0em;
         padding-bottom: 4rem;
       }
@@ -862,14 +905,7 @@ body {
         padding:0;
       }
 
-      #header-line {
-        margin-top: 20px;
-      }
 
-      .header-logo{
-        width: 180px;
-        height: 100px;
-      }
       
       .contact-heading{
         font-size:15px;
