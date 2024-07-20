@@ -178,7 +178,7 @@
 
     <!--Introduction Section 1-->
     <section class="intro-section" id="intro">
-      <div class="container">
+      <div class="container rounded-container" id="intro-container">
         <div class="divider" id="first-divider">
           <div class="container">
             <h1 class="ps-5 fw-bold divider-title">Betrieb</h1>
@@ -231,11 +231,11 @@
 
     <!--EBZ Divider-->
 
-    <!-- Features section-->
+    <!--------------- Features section --------------->
     <section class="feature-section" id="features">
       <!--FEATURE VERSION 2-->
       <!-------------------------------------------------------------------------------------->
-      <div class="container round-container">
+      <div class="container rounded-container">
         <div class="divider">
           <div class="container rounded-5">
             <h1 class="ps-5 fw-bold divider-title">Leistungen</h1>
@@ -265,9 +265,9 @@
         </p>
 
         <!--Erstes Feature-->
-        <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
-          <div class="col textcard">
-            <div class="feature-container">
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-2 ">
+          <div class="col textcard ">
+            <div class="feature-container ">
               <!--Element 1-->
               <div class="element1 d-flex align-items-start justify-content-end">
                 <div class="icon-square">
@@ -323,7 +323,6 @@
                 <div
                   class="icon-square"
                 >
-
                     <img
                       src="assets/icons/house.png"
                       alt="development icon"
@@ -333,7 +332,6 @@
                 </div>
               </div>
               <div class="element2 border-bottom border-2  d-flex flex-column justify-content-end align-items-start">
-
                   <span class="ms-3 feature-preheading">KfW</span>
                   <span class="h2 fw-bold text-uppercase feature-heading"
                   >
@@ -341,7 +339,6 @@
                     Förderkredite und Zuschüsse für bestehende Immobilien
                   </div></span
                 >
-
               </div>
               <div class="element3">
                 <p class="feature-font">
@@ -364,7 +361,7 @@
           </div>
 
 
-        <!--Viertes Feature-->
+        <!--Drittes Feature-->
         <div class="col d-flex align-items-start column-offset3 textcard">
           <div class="feature-container ">
           <div class="element1 d-flex align-items-start justify-content-end">
@@ -414,7 +411,7 @@
         </div>
         </div>
 
-          <!--Drittes Feature-->
+          <!--Viertes Feature-->
           <div class="col d-flex align-items-start column-offset2 textcard">
             <div class="feature-container">
 
@@ -472,7 +469,179 @@
 
       </div>
     </section>
-    <!---------------------------------------------->
+    <!------------------------------------------------>
+
+    <!--------------- Features section 2 --------------->
+    <section class="feature-section pt-5" id="features2">
+      <!--FEATURE VERSION 2-->
+      <!-------------------------------------------------------------------------------------->
+      <div class="container">
+        <div class="divider">
+          <div class="container rounded-5">
+            <h1 class="ps-5 fw-bold divider-title">Leistungen</h1>
+          </div>
+          <div class="container d-flex align-items-center">
+            <div class="icon">
+              <img
+                class="filter-grayscale"
+                src="assets/icons/EBZ_Logo_RGB_icon.svg"
+                alt="development icon"
+                width="17px"
+              />
+            </div>
+            <div class="line-container2" id="lineContainer">
+              <div class="line2"></div>
+            </div>
+          </div>
+        </div>
+
+        <!--<h1 class="pb-3 fw-bold section-divider">leistungen</h1>-->
+        <p class="px-4 pt-3 text-left pt-2 feature-text">
+          Als Ihr lokaler Energieberater biete ich Ihnen umfassende
+          Dienstleistungen zur detaillierten Analyse Ihrer Immobilie. Mit meinem
+          Fachwissen helfe ich Ihnen, Energieeinsparpotenziale zu identifizieren
+          und maßgeschneiderte Lösungen zur Verbesserung der Energieeffizienz
+          Ihres Objekts zu entwickeln.
+        </p>
+
+        
+        <div class="row row-cols-1 row-cols-lg-2 align-items-stretch g-4 card-row">
+
+          <!--Erstes Feature-->
+          <div class="col">
+            <div class="card card-cover h-100 text-bg-dark rounded-4 shadow-lg feature-card" id="huelle">
+              <div class="d-flex align-items-center justify-content-center">
+                <div class="pt-5 mt-5 mb-4 feature-headline">
+                  <span class="ms-3 feature-preheading">BAFA</span>
+                  <h3 class=" display-6 fw-bold">Einzelmaßnahmen an der Gebäudehülle</h3>   
+                </div>
+                <span class="feature-info">
+                  <p class="feature-font ">
+                    Gefördert werden Einzelmaßnahmen an Bestandsgebäuden, deren
+                    Bauantrag beziehungsweise Bauanzeige zum Zeitpunkt der
+                    Antragstellung mindestens fünf Jahre zurückliegt.
+                    <br /><br />
+                    Hierzu zählen unter Anderem:
+                  </p>
+                  <ul class="feature-font">
+                    <li>
+                      Dämmung der thermischen Gebäudehülle (Außenwand, Dach,
+                      Geschossdecken, Bodenflächen)
+                    </li>
+                    <li>
+                      Erneuerung und Ersatz von Fenstern, Außentüren, Außentoren
+                    </li>
+                    <li>
+                      Sommerlicher Wärmeschutz durch Ersatz oder erstmaligen
+                      Einbau von außenliegenden Sonnenschutzeinrichtungen mit
+                      optimierter Tageslichtversorgung.
+                    </li>
+                  </ul>
+                </span>
+              </div>
+            </div>
+          </div>
+    
+          <!--Zweites Feature-->
+          <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg feature-card" id="bestehend">
+              <div class="d-flex align-items-center justify-content-center text-shadow-1">
+                <div class="feature-headline">
+                  <span class="ms-3 feature-preheading">KfW</span>
+                  <h3 class=" display-6 lh-1 fw-bold">Förderkredite und Zuschüsse für bestehende Immobilien</h3>   
+                </div>
+                <div class="feature-info">
+                  <p class="feature-font">
+                    <b
+                      >Möchten Sie Ihr Haus/Ihre Wohnung oder Ihr Nichtwohngebäude
+                      energieeffizienzt oder barrierefrei sanieren?</b
+                    >
+                    <br />
+                    <b
+                      >Möchten Sie die Heizungsanlage Ihres Wohngebäudes
+                      erneuern?</b
+                    >
+                    <br />
+                    Als Energieeffizienzexperte unterstütze ich Sie hierbei bei
+                    der Antragstellung und der Bereitstellung der notwendigen
+                    Nachweise und Berechnungen.
+                  </p>
+              </div>
+              </div>
+            </div>
+          </div>
+
+    
+          <!--Drittes Feature-->
+          <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg feature-card" id="nachweis">
+              <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                <div class="feature-headline">
+                  <h3 class=" display-6 lh-1 fw-bold">Technische Nachweise und Berechnungen</h3>   
+                </div>
+                <span class="feature-info">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <ul class="transparent-list feature-font">
+                        <li>GEG-Nachweis</li>
+                        <li>Sommerlicher Wärmeschutznachweis</li>
+                        <li>Heizlastberechnung</li>
+                        <li>LCA (Lebenszyklusanalyse)</li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6">
+                      <ul class="transparent-list feature-font">
+                        <li>Hydraulischer Abgleich</li>
+                        <li>Lüftungskonzept</li>
+                        <li>Luftdichtheitskonzept</li>
+                        <li>iSFP (individueller Sanierungsfahrplan)</li>
+                      </ul>
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+    
+          <!--Viertes Feature-->
+          <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg feature-card" id="neubau">
+              <div class="d-flex flex-column justify-content-center align-items-center h-100 p-5 pb-3 text-white text-shadow-1">
+                <div class="feature-headline">
+                  <span class="ms-3 feature-preheading">KfW</span>
+                  <h3 class=" display-6 lh-1 fw-bold">Energieeffizienter Neubau</h3>   
+                </div>
+                <div class="feature-info">
+                  <p class="pt-3 feature-font">
+                    <b
+                      >Möchten Sie ein neues Haus/eine Eigentumswohnung bauen oder
+                      kaufen oder möchten Sie ein neues Nichtwohngebäude (bspw.
+                      Bürogebäude oder Produktionshalle) errichten?
+                    </b>
+                    <br />
+                    Dann lohnt es sich, auf niedrigen Energie­verbrauch und
+                    nach­haltige Bau­weise zu achten. Die KfW unter­stützt Ihr
+                    Vor­haben durch einen Förder­kredit mit besonders günstigen
+                    Zinsen.
+                    <br />
+                    Als Energieeffizienzexperte unterstütze ich Sie hierbei bei
+                    der Antragstellung und der Bereitstellung der notwendigen
+                    Nachweise und Berechnungen.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </section>
+    <!------------------------------------------------>
+
+
     <div class="contact-section">
       <!--EBZ Divider-->
       <!--EBZ Divider-->
@@ -694,6 +863,16 @@
           }
         }
       }
+
+      //Feature Card Hover->Click Effect
+      document.querySelectorAll('.feature-card').forEach(card => {
+        card.addEventListener('click', function() {
+          console.log('clicked');
+          this.classList.toggle('active');
+        });
+      });
+
+
     </script>
   </body>
 </html>

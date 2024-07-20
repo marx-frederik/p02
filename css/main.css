@@ -2,6 +2,132 @@
   --background: white;
 }
 
+#huelle{
+  background-image: url('/assets/huelle.jpg');
+  background-size: cover; /* oder 'contain', je nach Bedarf */
+}
+
+#neubau{
+  background-image: url('/assets/neubau.jpg');
+  background-size: cover; /* oder 'contain', je nach Bedarf */
+}
+
+#nachweis{
+  background-image: url('/assets/nachweis.jpg');
+  background-size: cover; /* oder 'contain', je nach Bedarf */
+}
+
+#bestehend{
+  background-image: url('/assets/bestehend.jpg');
+  background-size: cover; /* oder 'contain', je nach Bedarf */
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card{
+  min-height: 400px;
+  overflow: hidden; /* Verhindert, dass Inhalt über den Rand hinausgeht */
+}
+
+.card-row{
+  padding:2rem;
+}
+
+.feature-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  will-change: opacity, transform;
+  position: relative; /* Wichtig für die absolute Positionierung von .feature-info */
+
+}
+
+.feature-info {
+  opacity: 0;
+  transform: translateY(20%);
+  transition: opacity 0.5s, transform 0.5s;
+  position: absolute;
+  top: 0; /* Stellt sicher, dass es vom oberen Rand der .feature-card startet */
+  left: 0; /* Stellt sicher, dass es vom linken Rand der .feature-card startet */
+  right: 0; /* Streckt sich bis zum rechten Rand aus */
+  bottom: 0; /* Streckt sich bis zum unteren Rand aus */
+  padding:2rem;
+  overflow:auto;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.feature-headline{
+  padding:4rem;
+}
+
+.feature-card .feature-headline {
+  transition: opacity 0.3s ease;
+}
+
+.feature-card.active .feature-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feature-card.active .feature-headline {
+  opacity: 0;
+}
+
+.feature-card:hover{
+  box-shadow: 0 1px 2px rgba(0,0,0,.8);
+  transform: translateY(-3px) scale(1.01);
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dunkler Hintergrund mit Transparenz */
+  opacity: 0; /* Anfangs unsichtbar */
+  transition: opacity 0.5s ease; /* Weicher Übergang */
+  z-index: 0; /* Stellt sicher, dass es hinter den Textelementen liegt */
+}
+
+.feature-card.active::before {
+  opacity: 1; /* Wird sichtbar, wenn .feature-card aktiv ist */
+}
+
+.feature-heading{
+  font-size: 1.5rem;
+}
+
+.feature-text {/*Einleitungstext in Feature-Sektion*/
+  font-size: 1rem;
+  margin-left:2rem;
+  margin-right:2rem;
+}
+
+.feature-title {
+  min-height: 80px;
+  /*background-image: linear-gradient(to right,#5a232c31, #5a232c78);*/
+}
+
+.feature-info p {
+  white-space: normal; /* Erlaubt den Textumbruch */
+  word-break: break-word; /* Umbricht lange Wörter, um Überläufe zu verhindern */
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -12,20 +138,19 @@ body {
     background-position: center; /* Zentriert das Hintergrundbild */
   }
 
-  header2 {
+  header {
     position: relative; /* Erlaubt das Positionieren des Overlays innerhalb des Headers */
     
     /*background-image:linear-gradient(#ffe43762, #ffe437b2);
     background-image: linear-gradient(#ffe43756, #ffe437ce);*/
 
-    /*background-color: #ffe4371c;
-    background-color: rgba(219, 219, 219, 0.459);
+    background-color: white;
+    /*background-color: rgba(219, 219, 219, 0.459);
     background-color:fffce7c8;
     background-image: url("/assets/house.jpg");*/
     background-size: cover;
     background-position: center;
 
-    background-color: #ffffff;
 
     height: auto;
     display: flex;
@@ -39,7 +164,7 @@ body {
   }
 
  
-header {
+header_blur {
   position: relative; /* Stellt sicher, dass das Pseudo-Element relativ zum header positioniert wird */
   height: auto;
   display: flex;
@@ -51,7 +176,7 @@ header {
   padding-bottom: 5em;
 }
 
-header::before {
+header_blur::before {
   content: ""; /* Notwendig, um das Pseudo-Element anzuzeigen */
   position: absolute; /* Positioniert das Pseudo-Element absolut innerhalb des Headers */
   top: 0;
@@ -88,15 +213,20 @@ header::before {
     background-image:linear-gradient(rgb(255, 241, 159), white);
   }
 
-  .round-container {
+  .rounded-container {
     border-radius: 10px; /* Ändern Sie diesen Wert nach Bedarf */
     background-color: #bdbdbd4d;
+    
   }
 
   .intro-section{
-    /*background-color: #f5d50a1c;*/
+    background-color: white;
     padding-top: 0em;
     padding-bottom: 4rem;
+  }
+
+  #intro-container{
+    padding-bottom:3rem;
   }
 
   .feature-section {
@@ -165,15 +295,6 @@ header::before {
     list-style-type: square;
   }
 
-  .feature-text {
-    font-size: 20px;
-  }
-
-  .feature-title {
-    min-height: 80px;
-    /*background-image: linear-gradient(to right,#5a232c31, #5a232c78);*/
-  }
-
   .transparent-list li {
     /*background-color: rgba(255, 255, 255, 0); /* Hintergrundfarbe mit 50% Transparenz */
     /*opacity: 0.8;  Gesamttransparenz des Elements */
@@ -204,7 +325,7 @@ header::before {
 
   .divider-title {
     padding: 6px;
-    font-size: 50px;
+    font-size: 2.2rem;
     /*background-image: linear-gradient(to right,#5a232c5f,#5a232cc5);*/
   }
 
@@ -250,23 +371,14 @@ header::before {
     animation-name: fadeInLeftToRight;
   }
 
-  .intro-font{
-    font-size: 26px;
-    font-weight: 500;
-    
-    text-align: left;
-    margin-left: 100px;
-    margin-right: 50px;
-  }
-
   .intro-heading{
-    font-size: 32px;
+    font-size: 1.5rem;
     font-weight: 550;
     margin-left: 100px;
   }
 
   .intro-text{
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: 500;
     
     text-align: left;
@@ -307,7 +419,7 @@ header::before {
   }
 
   .about-text{
-    font-size:17px;
+    font-size:0.95rem;
   }
 
   .about-title{
@@ -407,7 +519,7 @@ header::before {
         padding-top: 2em;
       }
 
-      .feature-text {
+      .feature-text {/*Einleitungstext in Feature-Sektion*/
         font-size: 16px;
       }
 
@@ -510,7 +622,7 @@ header::before {
         padding-top: 2em;
       }
 
-      .feature-text {
+      .feature-text {/*Einleitungstext in Feature-Sektion*/
         font-size: 16px;
       }
 
@@ -657,7 +769,7 @@ header::before {
         padding-top: 2em;
       }
 
-      .feature-text {
+      .feature-text {/*Einleitungstext in Feature-Sektion*/
         font-size: 16px;
       }
 
@@ -835,7 +947,16 @@ header::before {
         margin-left:4rem;
       }
 
-      .feature-text {
+      .card{
+        min-height: 4rem;
+        overflow: hidden; /* Verhindert, dass Inhalt über den Rand hinausgeht */
+      }
+
+      .card-row{
+        padding:1.5rem;
+      }
+
+      .feature-text {/*Einleitungstext in Feature-Sektion*/
         font-size: 15px;
       }
 
@@ -956,7 +1077,7 @@ header::before {
         margin-left:4rem;
       }
 
-      .feature-text {
+      .feature-text {/*Einleitungstext in Feature-Sektion*/
         font-size: 12px;
       }
 
@@ -1020,11 +1141,9 @@ header::before {
         min-height: 0px;
         /*background-image: linear-gradient(to right,#5a232c31, #5a232c78);*/
       }
-
     }
 
     @media (max-width: 576px) and (orientation: landscape) {
-    
       .header-logo{
         width: 50vh;
         height: auto;
@@ -1077,9 +1196,10 @@ header::before {
 
   .feature-container {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 25% 75%;
     grid-template-rows: auto auto;
     gap: 0px;
+    padding-right:2rem;
   }
 
 
@@ -1110,6 +1230,10 @@ header::before {
       padding-left: 1rem; /* Padding für Einrückung */
       padding-right: 1rem; /* Padding für Einrückung */
 
+    }
+
+    .feature-container {
+      grid-template-columns: 30% 70%;
     }
   }
   
